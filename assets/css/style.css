@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(174, 210, 224);
+}
+.jumbotron {
+    background-color: #3e3e3e;
+    color: #efefef;
+}
+
+.form-container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.table-container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.submitArea {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
