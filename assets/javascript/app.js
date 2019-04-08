@@ -9,4 +9,23 @@
   };
   firebase.initializeApp(config);
 
-  
+  let trainName = "";
+  let trainDestination = "";
+  let trainTime = "";
+  let trainFrequency = "";
+
+  $("submit").on("click", function(event) {
+      event.preventDefault();
+
+    trainName = $("#trainNameDisplay").val().trim();
+    trainDestination = $("#destinationDisplay").val().trim();
+    trainFrequency = $("#frequencyDisplay").val().trim();
+   
+
+    firebase.database().ref().push({
+        trainName: trainName,
+        trainDestination: trainDestination,
+        trainFrequency: trainFrequency,
+        trainTime: trainTime
+      });
+  })

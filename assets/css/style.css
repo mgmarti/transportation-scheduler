@@ -6,15 +6,20 @@ body {
     color: #efefef;
 }
 
+.card-container {
+   background-color: #efefef
+}
+
+.card-header {
+    background-color: #3e3e3e;
+    color: #efefef;
+}
 .form-container {
     padding-left: 30px;
     padding-right: 30px;
 }
 
-.table-container {
-    padding-left: 30px;
-    padding-right: 30px;
-}
+
 .submitArea {
     margin-top: 10px;
     margin-bottom: 40px;
