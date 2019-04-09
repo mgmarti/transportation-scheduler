@@ -22,19 +22,19 @@
             <div class="form-row">
                 <div class="col-3">
                     <label for="inputTrainName">Train Name</label>
-                    <input type="text" class="form-control" placeholder="Train Name">
+                    <input type="text" id="train-name" class="form-control" placeholder="Train Name">
                 </div>
                 <div class="col-3">
                     <label for="inputDestination">Destination</label>
-                    <input type="text" class="form-control" placeholder="Destination">
+                    <input type="text" id="train-destination"class="form-control" placeholder="Destination">
                 </div>
                 <div class="col-3">
                     <label for="inputTrainTime">First Train Time</label>
-                    <input type="text" class="form-control" placeholder="HH:mm">
+                    <input type="text" id="train-time" class="form-control" placeholder="HH:mm">
                 </div>
                 <div class="col-3">
                     <label for="inputTrainFrequency">Frequency(min)</label>
-                    <input type="text" class="form-control" placeholder="Frequency (min)">
+                    <input type="text" id="train-frequency" class="form-control" placeholder="Frequency (min)">
                 </div>
             </div>
             <div class="submitArea text-center">
@@ -61,11 +61,12 @@
                         </thead>
                         <tbody>
                             <tr>
-                            <td id="trainNameDisplay"></td>
-                            <td id="destinationDisplay"></td>
-                            <td id="frequencyDisplay"></td>
-                            <td id="nextArrivalDisplay"></td>
-                            <td id="minutesAwayDisplay"></td>
+                            <td id="train-name-display"></td>
+                            <td id="destination-display"></td>
+                            <td id="frequency-display"></td>
+                            <td id="next-arrival-display"></td>
+                            <td id="minutes-away-display"></td>
+                            <hr id="divider">
                             </tr>
             
                         </tbody>
