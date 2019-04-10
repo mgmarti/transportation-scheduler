@@ -30,11 +30,11 @@
                 </div>
                 <div class="col-3">
                     <label for="inputTrainTime">First Train Time</label>
-                    <input type="text" id="train-time" class="form-control" placeholder="HH:mm">
+                    <input type="number" id="train-time" class="form-control" placeholder="HH:mm">
                 </div>
                 <div class="col-3">
                     <label for="inputTrainFrequency">Frequency(min)</label>
-                    <input type="text" id="train-frequency" class="form-control" placeholder="Frequency (min)">
+                    <input type="number" id="train-frequency" class="form-control" placeholder="Frequency (min)">
                 </div>
             </div>
             <div class="submitArea text-center">
@@ -50,7 +50,7 @@
             <div class="card-body">
                 
                     <table class="table">
-                        <thead class="">
+                        <thead>
                             <tr>
                             <th scope="col">Train Name</th>
                             <th scope="col">Destination</th>
@@ -80,6 +80,7 @@
     
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
     <script src="./assets/javascript/app.js"></script>
 </body>
 </html>

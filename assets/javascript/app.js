@@ -9,10 +9,13 @@
   };
   firebase.initializeApp(config);
   console.log(config)
+  
   let trainName = "";
   let trainDestination = "";
   let trainTime = "";
   let trainFrequency = "";
+  let nextArrival;
+  let minutesAway;
 
   $("#submit").on("click", function(event){
     event.preventDefault();
@@ -27,6 +30,8 @@
     trainFrequency: trainFrequency,
     });
 
+    $('form').get(0).reset();
+
 })
 
 firebase.database().ref().on("value", function(snapshot){
@@ -34,7 +39,6 @@ firebase.database().ref().on("value", function(snapshot){
   $("#trainNameDisplay").html(snapshot.val().trainName);
   $("#destinationDisplay").html(snapshot.val().trainDestination);
   $("#frequencyDisplay").html(snapshot.val().trainFrequency);
-  $("#divider").html();
     console.log(snapshot.val());
 })
 
@@ -43,5 +47,8 @@ firebase.database().ref().on("child_added", function(childSnapshot) {
   $("#train-name-display").append("<p>" +childSnapshot.val().trainName+"</p>")
   $("#destination-display").append("<p>" +childSnapshot.val().trainDestination+"</p>")
   $("#frequency-display").append("<p>" +childSnapshot.val().trainFrequency+"</p>")
+  $("#next-arrival-display").append("<p>" +childSnapshot.val().nextArrival+"</p>")
+  $("#minutes-away-display").append("<p>" +childSnapshot.val().minutesAway+"</p>")
     console.log(childSnapshot);
 })
+
